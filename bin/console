@@ -1,0 +1,11 @@
+#!/usr/bin/env php
+<?php
+require_once __DIR__ . '/../vendor/autoload.php';
+ 
+use Symfony\Component\Console\Application;
+use Console\App\Commands\ValidatorCommand;
+
+$app = new Application();
+$app->add(new ValidatorCommand());
+$app->run();
+
