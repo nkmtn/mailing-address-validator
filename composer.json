@@ -1,11 +1,18 @@
 {
     "require": {
-        "symfony/console": "^5.1"
+        "symfony/console": "^5.1",
+        "nkmtn/russian-post-bundle": "dev-main"
     },
     "autoload": {
          "psr-4": {
              "Console\\": "src"
          },
          "classmap": ["src"]
-     }
+    },
+    "repositories": [
+      {
+        "type": "vcs",
+        "url": "https://github.com/nkmtn/russian-post-bundle.git"
+      }
+    ]
 }

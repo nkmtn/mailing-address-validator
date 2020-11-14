@@ -2,11 +2,14 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-use App\Command\MetricsCommand;
+use Console\App\Commands\ValidatorCommand;
 use Symfony\Component\Console\Application;
 
 $app = new Application();
 
-$app->add(new MetricsCommand());
+$app->add(new ValidatorCommand());
 
-$app->run();
+try {
+    $app->run();
+} catch (Exception $e) {
+}
