@@ -65,7 +65,7 @@ function file_read(string $str,string $f)
         $count = count($TABLE);
        
         
-        $c=count($TABLE);
+      $answer = array();
         /* 3- Это адреса
            1 - Округ (Республика ....)
            2 - Время и дата
@@ -79,9 +79,9 @@ function file_read(string $str,string $f)
 
       */
         for ($i = 0; $i <$count; $i++) {
-            echo $TABLE[$i][$target]. "\n";
+           $answer[$i]= $TABLE[$i][$target];
         } 
-
+     return $answer; //Array c данными
     }
 
     function file_write(array $str,string $filename)
