@@ -1,7 +1,8 @@
 {
     "require": {
         "symfony/console": "^5.1",
-        "nkmtn/russian-post-bundle": "dev-main"
+        "nkmtn/russian-post-bundle": "dev-main",
+        "phpoffice/phpspreadsheet":"^1.15.0.0"
     },
     "autoload": {
          "psr-4": {
