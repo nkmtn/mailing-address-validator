@@ -19,14 +19,14 @@ class ValidatorCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $client = new RussianPostClient('53fb9daa-7f06-481f-aad6-c6a7a58ec0bb');
-        $address = $client->validate('респ. Карелия, г. Петрозаводск, ул. Мичуринская, 36');
-	    $output->writeln($address->getCountry());
-        $output->writeln($address->getDistrictType());
-        $output->writeln($address->getDistrictName());
-        $output->writeln($address->getLocalityType());
-        $output->writeln($address->getLocalityName());
-        $output->writeln($address->getStreetType());
-        $output->writeln($address->getStreetName());
+        $address = $client->validate('респ. Карелия, г. Петрозаводск, ул. Мичуринская, 36,');
+
+        $output->writeln($address->getInaddr());
+        $output->writeln($address->getOutaddr());
+
+        $mistake = $address->getMistake();
+        $output->writeln($address->getDelivery());
+
 	
 	    return 0;
     }
