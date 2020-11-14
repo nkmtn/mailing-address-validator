@@ -1,5 +1,6 @@
 {
     "require": {
+       "php-amqplib/php-amqplib": "^2.12",
         "symfony/console": "^5.1",
         "nkmtn/russian-post-bundle": "dev-main",
         "phpoffice/phpspreadsheet":"^1.15.0.0"
